@@ -5,8 +5,6 @@ from datetime import datetime, timedelta
 from sqlalchemy.orm import sessionmaker
 import smtplib
 
-#Инструкция к запуску в файле README
-
 Base = declarative_base()
 
 class Table(Base):
@@ -132,7 +130,7 @@ class ToDoList():
         subject = input("Enter subject of mail\n")
         server = smtplib.SMTP("smtp.mail.ru", 587)
         server.starttls()
-        #Ввод учетных данных либо с клавиатуры, либо через переменные
+        #Enter your username and password using the keyboard, or using variables
         #email = "your_email@mail.ru"
         #password = "your_password"
         email = input("Enter your email\n")
